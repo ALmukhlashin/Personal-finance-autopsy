@@ -34,10 +34,10 @@ export async function GET(request: Request) {
       ...(search
         ? {
             OR: [
-              { notes: { contains: search, mode: "insensitive" } },
+              { notes: { contains: search} },
               {
                 category: {
-                  name: { contains: search, mode: "insensitive" },
+                  name: { contains: search},
                 },
               },
             ],
